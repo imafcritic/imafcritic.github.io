@@ -2,7 +2,7 @@ Vidpub = {};
 
 Vidpub.start = function(){
 
-  Vidpub.rootUrl = "https://vidpub.firebaseio.com";
+  Vidpub.rootUrl = "https://staticwebsite.firebaseio.com";
   Vidpub.dbRef = new Firebase(Vidpub.rootUrl);
 
   Vidpub.dbRef.onAuth(function(authData){
