@@ -1,7 +1,7 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a href="/" class="navbar-brand">Static website</a>
+      <a href="/" class="navbar-brand">I'm a fucking critic</a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -11,7 +11,7 @@
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="catalog">Catalog <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="catalog">Posts <span class="caret"></span></a>
           <ul class="dropdown-menu" aria-labelledby="catalog">
             {% for post in site.posts %}
             <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
@@ -25,15 +25,9 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>
-
-          <a href="https://transactions.sendowl.com/cart?merchant_id=19012" rel="nofollow">Cart</a> <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
-
-        </li>
         <li ><a href="#" class="snipcart-user-profile"><span data-bind="text: name"></span></a></li>
         <li><a href="#" data-bind="click: login_or_out"><span data-bind="text: login_or_out_button"></span></a></li>
-
-        <li><a href="http://google.com" target="_blank">Help</a></li>
+        <li><a href="http://google.com" target="_blank">Contact</a></li>
       </ul>
 
     </div>

@@ -1,8 +1,8 @@
 ---
 layout: product
-title: 'Rocket Pack Basics'
+title: 'First critic'
 image: 'rocketpack.jpg'
-price: 956.99
+#price: 956.99
 tags: burning-buns,smashed-visor,fastfastfast
 vendor: "Jimmy's Winged Space Flight"
 vendor_link: "jimmy"
