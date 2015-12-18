@@ -2,14 +2,20 @@
 layout: page
 ---
 
+<aside class="logo">
+<a href="https://leo.im/about">I'm a fucking critic</a>
+</aside>
 
-    <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <div class="list-group table-of-contents">
-          {% for post in site.posts %}
-          <a class="list-group-item" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+<main>
+	<noscript>
+	&lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
+	</noscript>
+	<section>
+		<u>
+		  {% for post in site.posts %}
+		  <li> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> </li>
+		  {% endfor %}
 
+		</ul>
+	</section>
+</main>
