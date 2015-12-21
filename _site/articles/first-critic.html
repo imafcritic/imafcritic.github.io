@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Signup</title>
-  <meta name="description" content="">
+  <title>First critic</title>
+  <meta name="description" content="Description">
 
   <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="/css/leo.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
-  <link rel="canonical" href="http://vidpub.com/account/signup">
+  <link rel="canonical" href="http://vidpub.com/articles/first-critic">
   <link rel="alternate" type="application/rss+xml" title="I'm a fucking critic" href="http://vidpub.com/feed.xml">
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -44,6 +44,8 @@
             
             <li><a href="/articles/this-is-not-the-start">This is not the start</a></li>
             
+            <li><a href="/articles/first-critic">First critic</a></li>
+            
           </ul>
         </li>
         <li>
@@ -64,82 +66,30 @@
  -->
 
 
-    <div class="container">
-  <link rel="stylesheet" href="/css/login.css">
-<div class="omb_login">
-  <h3 class="omb_authTitle"><a href="/account/login">Login</a> or Sign up</h3>
+    <div class="container" style="padding-top: 80px;" id = "product-container">
+  <div class="row">
+    <div class="col-md-7">
+      <img src="/img/products/rocketpack.jpg" alt=""/>
+    </div>
+    <div class="col-md-5">
+      <h1>First critic</h1>
 
-  <div class="row omb_row-sm-offset-3 omb_row-sm-offset-3 omb_socialButtons">
-    <div class="col-xs-12 col-sm-6">
-      <a href="#" class="btn btn-lg btn-block omb_btn-github" id="github">
-        <i class="fa fa-github"></i>
-        <span class="hidden-xs">Github</span>
-      </a>
+      <p><a href="/vendors/jimmy">Jimmy's Winged Space Flight</a></p>
+
+      <p class="lead"><i>The fit of your new rocket suit is critical. Too high and you'll fly right into the ground; too low and your buns will crisp up like butter in a toaster. We'll show you the right way to look good flying with fire on your back.</i></p>
+      <h3>$</h3>
+      <hr />
+
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12" style="padding-bottom:120px;padding-top:60px">
+      <h2 id="description">Description</h2>
 
-  <div class="row omb_row-sm-offset-3 omb_loginOr">
-    <div class="col-xs-12 col-sm-6">
-      <hr class="omb_hrOr">
-      <span class="omb_spanOr">or</span>
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam qui ducimus facilis quisquam repudiandae, hic officiis porro explicabo, ab consequatur, accusamus enim eveniet, amet repellendus saepe officia vel aliquid voluptatum?
     </div>
   </div>
-
-  <div class="row omb_row-sm-offset-3">
-		<div class="col-xs-12 col-sm-6">
-      <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input type="text" class="form-control" id="name" placeholder="name">
-      </div>
-      <span class="help-block"></span>
-      <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input type="text" class="form-control" id="email" placeholder="email">
-      </div>
-      <span class="help-block"></span>
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-				<input  type="password" class="form-control" id="password" placeholder="Password">
-			</div>
-      <span class="help-block"></span>
-
-			<button  id="signup" class="btn btn-lg btn-primary btn-block" type="submit">Signup</button>
-      <span class="help-block" id="error" style="color:red;font-weight:bold"></span>
-		</div>
-  </div>
-</div>
-<script>
-$(function(){
-
-  $("#github").on("click", function(ev){
-    ev.preventDefault();
-    Vidpub.loginGithub(function(err,res){
-      if(err){
-        $("#error").text(err);
-      }else{
-        location.href = "/";
-      }
-    });
-  });
-
-  $("#signup").on("click", function(){
-    Vidpub.createUser({
-      email    : $("#email").val(),
-      name    : $("#name").val(),
-      password : $("#password").val()
-    }, function(err,userData){
-      if(err){
-        $("#error").text(err);
-      }else{
-        location.href = "/";
-      }
-    });
-  });
-
-});
-
-</script>
-
 </div>
 <script>
 $(function(){
