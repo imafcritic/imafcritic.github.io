@@ -152,7 +152,7 @@ span[data-note].open {
     border-radius: 75px;
     display: inline-block;
     text-align: center;
-    line-height: 75px;
+    line-height: 40px;
 }
 
 @media (min-width: 768px) {
@@ -172,10 +172,11 @@ span[data-note].open {
         transition: transform 0.4s;
         -webkit-transition: -webkit-transform 0.4s;
         box-sizing: border-box;
-        line-height: 80px;
-        height: 180px;
-        width: 180px;
-        border-radius: 180px;
+        line-height: 40px;
+        height: 160px;
+        width: 160px;
+        border-radius: 160px;
+		padding-top: 10px;
     }
     .logo a:hover {
         transform: scale(1.2);
