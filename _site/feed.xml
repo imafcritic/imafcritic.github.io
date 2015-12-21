@@ -3,10 +3,10 @@
   <channel>
     <title>I&#39;m a fucking critic</title>
     <description></description>
-    <link>http://vidpub.com/</link>
-    <atom:link href="http://vidpub.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Dec 2015 16:43:28 +0200</pubDate>
-    <lastBuildDate>Mon, 21 Dec 2015 16:43:28 +0200</lastBuildDate>
+    <link>http://ilincescumihai.github.io//</link>
+    <atom:link href="http://ilincescumihai.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 21 Dec 2015 16:49:26 +0200</pubDate>
+    <lastBuildDate>Mon, 21 Dec 2015 16:49:26 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -16,8 +16,8 @@ Welcome and hope you have the same !&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 16 Dec 2015 14:07:39 +0200</pubDate>
-        <link>http://vidpub.com/articles/this-is-not-the-start</link>
-        <guid isPermaLink="true">http://vidpub.com/articles/this-is-not-the-start</guid>
+        <link>http://ilincescumihai.github.io//articles/this-is-not-the-start</link>
+        <guid isPermaLink="true">http://ilincescumihai.github.io//articles/this-is-not-the-start</guid>
         
         
         <category>jekyll</category>
