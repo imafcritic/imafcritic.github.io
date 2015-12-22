@@ -1,14 +1,17 @@
 body {
     font-family: 'Fira Sans', sans-serif;
-    padding: 20px;
     margin: 0;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;	
+}
+
+main{
+	padding:20px;
 }
 
 @media (min-width: 992px) {
-    body {
+    main {
         padding: 35px 50px;
     }
 }
@@ -136,7 +139,7 @@ span[data-note].open {
 }
 
 .logo {
-    margin: 60px 0;
+    margin: 0;
     text-align: left;
 }
 
@@ -146,19 +149,19 @@ span[data-note].open {
     text-decoration: none;
     text-transform: lowercase;
     font-weight: 700;
-    height: 175px;
-    width: 175px;
-    font-size: 1.5em;
-    border-radius: 75px;
+    height: 28px;
+    width: 100%;
+    font-size: 0.8em;
     display: inline-block;
     text-align: center;
-    line-height: 40px;
+    line-height: 25px;
+	padding-top: 5px;
 }
 
 @media (min-width: 768px) {
     .logo {
         position: fixed;
-        top: 50px;
+        top: 30px;
         right: 50px;
         margin: 0;
         animation-duration: 1s;
@@ -173,6 +176,7 @@ span[data-note].open {
         -webkit-transition: -webkit-transform 0.4s;
         box-sizing: border-box;
         line-height: 40px;
+		font-size: 1.8em;
         height: 160px;
         width: 160px;
         border-radius: 160px;
@@ -345,7 +349,8 @@ section ul li a {
     text-decoration: none;
     border: 0;
     color: #000;
-    display: inline-block;
+    display: block;
+	text-align: center;
     box-sizing: border-box;
 }
 
@@ -354,7 +359,12 @@ section ul li a {
         border-bottom: 2px solid transparent;
     }
     section ul li a:hover {
-        border-color: #000;
+        color: #da1664;
+		/* #da1664; */
+		/* #42a8bd */
+		/* #80bb44 */
+		/* text-decoration:underline; */
+		transition: color 0.3s ease;
     }
 }
 
