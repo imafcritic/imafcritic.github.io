@@ -6,12 +6,12 @@ body {
     -webkit-text-size-adjust: 100%;	
 }
 
-main{
+article, main{
 	padding:20px;
 }
 
 @media (min-width: 992px) {
-    main {
+    article, main {
         padding: 35px 50px;
     }
 }
@@ -151,7 +151,7 @@ span[data-note].open {
     font-weight: 700;
     height: 28px;
     width: 100%;
-    font-size: 0.8em;
+    font-size: 1.2em;
     display: inline-block;
     text-align: center;
     line-height: 25px;
