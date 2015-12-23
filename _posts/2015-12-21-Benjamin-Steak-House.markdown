@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Benjamin Steak House"
+title:  "Benjamin Steak House - Sibiu, Romania"
 date:   2015-12-21 14:07:39 +0200
 categories: jekyll update
 FBUrl : Benjamin-Steak-House
