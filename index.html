@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<aside class="left">
+<aside class="col-md-3 left">
         <ul>
             {% for post in site.posts %}
             <li>
@@ -13,7 +13,7 @@ layout: page
         </ul>
 </aside>
 
-<main>
+<main class="col-md-6">
 	<noscript>
 	&lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
 	</noscript>
@@ -29,6 +29,6 @@ layout: page
 	</section>
 </main>
 
-<aside class="right">
+<aside class="col-md-3 right">
    <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ page.FBUrl }}/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
 </aside>
