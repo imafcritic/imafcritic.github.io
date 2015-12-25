@@ -1,0 +1,64 @@
+ /* -------------------------------- Reset command default values -------------------------------------*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body{
+  height:100%;
+ padding:1em;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    border: 0;
+    color: #000000;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    color: #da1664;
+	/* #da1664; */
+	/* #42a8bd */
+	/* #80bb44 */
+	/* text-decoration:underline; */
+	transition: color 0.3s ease;
+}
+/* -------------------------------- /Reset command default values -------------------------------------*/
+
+
+/* ------------------------------------- Main components ---------------------------------------------*/
+main {
+    float:left;
+    width:55%;
+}
+
+section {
+    width:85%;
+    margin:auto;
+    /*text-align:center;*/
+}
+
+aside {
+    height:100%;
+}
+
+.left {
+    width:20%;
+    float:left;
+    border-right:dotted 1px #cccccc; 
+}
+
+.right {
+    width:25%;
+    float:right;
+    border-left:dotted 1px #cccccc; 
+    /*text-align:right;*/
+}
+
+/* ------------------------------------- /Main components ---------------------------------------------*/

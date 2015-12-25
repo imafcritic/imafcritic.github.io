@@ -2,8 +2,15 @@
 layout: page
 ---
 
-<aside class="logo">
-<a href="http://ilincescumihai.github.io/">I'm a fucking critic</a>
+<aside class="left">
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+
+        </ul>
 </aside>
 
 <main>
@@ -13,9 +20,15 @@ layout: page
 	<section>
 		<ul>
 		  {% for post in site.posts %}
-		  <li> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> </li>
+		  <li> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> 
+                {{ post.content }}
+          </li>
 		  {% endfor %}
 
 		</ul>
 	</section>
 </main>
+
+<aside class="right">
+   <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ page.FBUrl }}/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+</aside>
