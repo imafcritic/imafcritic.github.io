@@ -35,7 +35,7 @@ a:hover {
 /* ------------------------------------- Main components ---------------------------------------------*/
 main {
     float:left;
-    width:55%;
+    width:45%;
 }
 
 section {
@@ -48,17 +48,44 @@ aside {
     height:100%;
 }
 
-.left {
-    width:20%;
-    float:left;
-    border-right:dotted 1px #cccccc; 
+.leftDiv {
+    width: 20%;
+    float: left;
 }
 
-.right {
-    width:25%;
+.rightDiv {
+    width:35%;
     float:right;
-    border-left:dotted 1px #cccccc; 
     /*text-align:right;*/
+}
+
+/* ------------------------------------- /sidebar ---------------------------------------------*/
+ 
+
+.sidebar.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%; 
+    border-left:dotted 1px #cccccc; 
+}
+
+.sidebar.right {
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 35%; 
+    border-right:dotted 1px #cccccc; 
+}
+ 
+
+.sidebars > .sidebar {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+    position: fixed;
+    color: white;
+    padding: 30px; 
+    text-align: center;
 }
 
 /* ------------------------------------- /Main components ---------------------------------------------*/

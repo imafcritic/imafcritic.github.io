@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>I&#39;m a fucking critic</title>
-    <description></description>
+    <description>Awesome
+</description>
     <link>http://ilincescumihai.github.io//</link>
     <atom:link href="http://ilincescumihai.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 19:50:26 +0200</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 19:50:26 +0200</lastBuildDate>
+    <pubDate>Sun, 27 Dec 2015 00:22:11 +0200</pubDate>
+    <lastBuildDate>Sun, 27 Dec 2015 00:22:11 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -27,7 +28,7 @@
     
       <item>
         <title>This is not the start</title>
-        <description>&lt;p&gt;This is not the start this is the critic. This is a site about our complaints.&lt;br /&gt;
+        <description>&lt;p&gt;This is not the start this is the critic. This is a site about our complaints.
 Welcome and hope you have the same !&lt;/p&gt;
 
 </description>

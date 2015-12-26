@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>I'm a fucking critic</title>
-  <meta name="description" content="">
+  <meta name="description" content="Awesome
+">
 
   <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="/css/default.css">
@@ -21,7 +22,8 @@
   <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
   <script src="/js/knockout-3.3.0.js"></script>
   <script src="/js/app.js"></script> 
-  <script src="/js/jquery.sidebar.min.js"></script>
+  <script src="/js/jquery.sidebar.js"></script>
+  <script src="/js/handlers.js"></script>
 </head>
 
 
@@ -82,22 +84,14 @@
 
     <!-- start page.html-->
   <!-- start index.html-->
-<aside class="left">
-        <ul>
-            
-            <li>
-                <a href="/articles/Benjamin-Steak-House">Benjamin Steak House - Sibiu, Romania</a>
-            </li>
-            
-            <li>
-                <a href="/articles/this-is-not-the-start">This is not the start</a>
-            </li>
-            
+<aside class="leftDiv">
+      
 
-        </ul>
 </aside>
 
 <main>
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="left"><span>Toggle Left</span></a>
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Toggle Right</span></a>
 	 <noscript>
 	&lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
 	</noscript>
@@ -111,7 +105,7 @@
           </li>
 		  
 		  <li> <a href="/articles/this-is-not-the-start">This is not the start</a> 
-                <p>This is not the start this is the critic. This is a site about our complaints.<br />
+                <p>This is not the start this is the critic. This is a site about our complaints.
 Welcome and hope you have the same !</p>
 
 
@@ -122,9 +116,26 @@ Welcome and hope you have the same !</p>
 	</section>
 </main>
 
-<aside class="right">
-   <div class="fb-comments" data-href="http://imafcritic.github.io/articles//" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+<aside class="rightDiv">
 </aside>
+<div class="sidebars">
+    <div class="sidebar left">
+        <ul>
+            
+            <li>
+                <a href="/articles/Benjamin-Steak-House">Benjamin Steak House - Sibiu, Romania</a>
+            </li>
+            
+            <li>
+                <a href="/articles/this-is-not-the-start">This is not the start</a>
+            </li>
+            
+
+        </ul>
+    </div>
+    <div class="sidebar right">
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles//" data-numposts="10" data-width="400" data-order-by="reverse_time"></div></div> 
+</div>
 <!-- end index.html-->
 <script>
 $(function(){

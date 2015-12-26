@@ -2,18 +2,14 @@
 layout: page
 ---
 <!-- start index.html-->
-<aside class="left">
-        <ul>
-            {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
+<aside class="leftDiv">
+      
 
-        </ul>
 </aside>
 
 <main>
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="left"><span>Toggle Left</span></a>
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Toggle Right</span></a>
 	 <noscript>
 	&lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
 	</noscript>
@@ -29,7 +25,20 @@ layout: page
 	</section>
 </main>
 
-<aside class="right">
-   <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ page.FBUrl }}/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+<aside class="rightDiv">
 </aside>
+<div class="sidebars">
+    <div class="sidebar left">
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div class="sidebar right">
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ page.FBUrl }}/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div></div> 
+</div>
 <!-- end index.html-->
