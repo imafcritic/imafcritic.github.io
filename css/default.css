@@ -79,6 +79,22 @@ aside {
     border-right:dotted 1px #cccccc; 
 }
  
+.arrow {
+    height:100%;
+    width:10px;
+    border:dotted 1px #cccccc; 
+    margin: -2em;
+    cursor: pointer; 
+    /*background-color:rebeccapurple;*/
+}
+
+.arrow.left{
+    float:right;
+}
+
+.arrow.right{
+    float:left;
+}
 
 .sidebars > .sidebar {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);

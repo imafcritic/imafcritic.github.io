@@ -100,7 +100,7 @@
         self.on("sidebar:close", function(ev, data) {
             var properties = {};
             if (settings.side === "left" || settings.side === "right") {
-                properties[settings.side] = -self.outerWidth();
+                properties[settings.side] = -self.outerWidth()+7;
             } else {
                 properties[settings.side] = -self.outerHeight();
             }

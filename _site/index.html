@@ -87,9 +87,6 @@
 <aside class="leftDiv"></aside>
 
 <main>
-    <a href="#" class="btn btn-primary" data-action="toggle" data-side="left"><span>Toggle Left</span></a>
-
-    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Comments</span></a>
     <noscript>
         &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
     </noscript>
@@ -104,9 +101,9 @@
                     <a href="#" class="btn" tag="articles/Benjamin-Steak-House.html" data-action="select" >Benjamin Steak House - Sibiu, Romania</a>
                     <p>I guess anyone can stick a name to a product and pretend they are something they are not. I doubt if the cook at this good looking place,i have to say, ever tasted a  decent steak. This place is to be avoided if you want decent food at all costs, it’s just glorified fast food place with slow food and high prices !</p>
 
- 
+
                     <div class="horiz_line"></div>
-                </div> 
+                </div>
             </li>     
             <li> 
                 <div class="article" id="this-is-not-the-start"> 
@@ -114,9 +111,9 @@
                     <p>This is not the start this is the critic. This is a site about our complaints.<br />
 Welcome and hope you have the same !</p>
 
- 
+
                     <div class="horiz_line"></div>
-                </div> 
+                </div>
             </li>    
         </ul>
     </section>
@@ -125,7 +122,7 @@ Welcome and hope you have the same !</p>
 <aside class="rightDiv"></aside>
 <div class="sidebars">
     <div class="sidebar left">
-        <ul> 
+        <ul style="float:left;"> 
             <li>
                 <a href="/articles/Benjamin-Steak-House.html">Benjamin Steak House - Sibiu, Romania</a>
             </li> 
@@ -133,12 +130,14 @@ Welcome and hope you have the same !</p>
                 <a href="/articles/this-is-not-the-start.html">This is not the start</a>
             </li>  
         </ul>
+        <div class="arrow left btn btn-primary" data-action="toggle" data-side="left"></div>
     </div>
     <div class="sidebar right" id="comments">
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/asd" tag ="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+        <div class="arrow right btn btn-primary" data-action="toggle" data-side="right"></div> 
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles//articles/Benjamin-Steak-House.html" tag ="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
-</div>
-<!-- end index.html-->
+</div> 
+<!-- end index.html--> 
 <script>
 $(function(){
   Vidpub.start();
@@ -158,6 +157,11 @@ $(function(){
 </div>
 <!-- end gooter.html-->
 
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
   </body>
 
 </html> 
