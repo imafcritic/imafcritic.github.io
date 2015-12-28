@@ -58,7 +58,8 @@
             //$("#main_article").load(ref);
             main_id = current_id; 
             // empty out the selected one 
-            $currentArticle.empty(); 
+            $currentArticle.empty();
+            changeCommentsUrl("http://imafcritic.github.io/articles//"); 
         }
         return false;
     });
