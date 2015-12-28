@@ -9,8 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>I'm a fucking critic</title>
-  <meta name="description" content="Awesome
-">
+  <meta name="description" content="">
 
   <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="/css/default.css">
@@ -56,9 +55,9 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="catalog">Posts <span class="caret"></span></a>
           <ul class="dropdown-menu" aria-labelledby="catalog">
             
-            <li><a href="/articles/Benjamin-Steak-House">Benjamin Steak House - Sibiu, Romania</a></li>
+            <li><a href="/articles/Benjamin-Steak-House.html">Benjamin Steak House - Sibiu, Romania</a></li>
             
-            <li><a href="/articles/this-is-not-the-start">This is not the start</a></li>
+            <li><a href="/articles/this-is-not-the-start.html">This is not the start</a></li>
             
           </ul>
         </li>
@@ -84,57 +83,59 @@
 
     <!-- start page.html-->
   <!-- start index.html-->
-<aside class="leftDiv">
-      
-
-</aside>
+<aside class="leftDiv"></aside>
 
 <main>
     <a href="#" class="btn btn-primary" data-action="toggle" data-side="left"><span>Toggle Left</span></a>
-    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Toggle Right</span></a>
-	 <noscript>
-	&lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
-	</noscript>
-	<section>
-		<ul>
-		  
-		  <li> <a href="/articles/Benjamin-Steak-House">Benjamin Steak House - Sibiu, Romania</a> 
-                <p>I guess anyone can stick a name to a product and pretend they are something they are not. I doubt if the cook at this good looking place,i have to say, ever tasted a  decent steak. This place is to be avoided if you want decent food at all costs, it’s just glorified fast food place with slow food and high prices !</p>
+    <noscript>
+        &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
+    </noscript>
+    <section id="main_article">
+        Benjamin Steak House - Sibiu, Romania
+        <p>I guess anyone can stick a name to a product and pretend they are something they are not. I doubt if the cook at this good looking place,i have to say, ever tasted a  decent steak. This place is to be avoided if you want decent food at all costs, it’s just glorified fast food place with slow food and high prices !</p>
 
 
-          </li>
-		  
-		  <li> <a href="/articles/this-is-not-the-start">This is not the start</a> 
-                <p>This is not the start this is the critic. This is a site about our complaints.
+    </section>
+
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Comments</span></a>
+    <section id="all_articles">
+        <ul>    
+            <li> 
+                <div class="article" id="Benjamin-Steak-House"> 
+                    <a href="#" class="btn" tag="articles/Benjamin-Steak-House.html" data-action="select" >Benjamin Steak House - Sibiu, Romania</a>
+                    <p>I guess anyone can stick a name to a product and pretend they are something they are not. I doubt if the cook at this good looking place,i have to say, ever tasted a  decent steak. This place is to be avoided if you want decent food at all costs, it’s just glorified fast food place with slow food and high prices !</p>
+
+
+                </div>
+            </li>     
+            <li> 
+                <div class="article" id="this-is-not-the-start"> 
+                    <a href="#" class="btn" tag="articles/this-is-not-the-start.html" data-action="select" >This is not the start</a>
+                    <p>This is not the start this is the critic. This is a site about our complaints.<br />
 Welcome and hope you have the same !</p>
 
 
-          </li>
-		  
-
-		</ul>
-	</section>
+                </div>
+            </li>    
+        </ul>
+    </section>
 </main>
 
-<aside class="rightDiv">
-</aside>
+<aside class="rightDiv"></aside>
 <div class="sidebars">
     <div class="sidebar left">
-        <ul>
-            
+        <ul> 
             <li>
-                <a href="/articles/Benjamin-Steak-House">Benjamin Steak House - Sibiu, Romania</a>
-            </li>
-            
+                <a href="/articles/Benjamin-Steak-House.html">Benjamin Steak House - Sibiu, Romania</a>
+            </li> 
             <li>
-                <a href="/articles/this-is-not-the-start">This is not the start</a>
-            </li>
-            
-
+                <a href="/articles/this-is-not-the-start.html">This is not the start</a>
+            </li>  
         </ul>
     </div>
     <div class="sidebar right">
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles//" data-numposts="10" data-width="400" data-order-by="reverse_time"></div></div> 
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles//" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+    </div>
 </div>
 <!-- end index.html-->
 <script>

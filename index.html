@@ -2,43 +2,42 @@
 layout: page
 ---
 <!-- start index.html-->
-<aside class="leftDiv">
-      
-
-</aside>
+<aside class="leftDiv"></aside>
 
 <main>
     <a href="#" class="btn btn-primary" data-action="toggle" data-side="left"><span>Toggle Left</span></a>
-    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Toggle Right</span></a>
-	 <noscript>
-	&lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
-	</noscript>
-	<section>
-		<ul>
-		  {% for post in site.posts %}
-		  <li> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> 
-                {{ post.content }}
-          </li>
-		  {% endfor %}
+    <noscript>
+        &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
+    </noscript>
+    <section id="main_article">
+        {{ site.posts.first.title }}
+        {{ site.posts.first.content }}
+    </section>
 
-		</ul>
-	</section>
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Comments</span></a>
+    <section id="all_articles">
+        <ul>  {% for post in site.posts %}  
+            <li> 
+                <div class="article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"> 
+                    <a href="#" class="btn" tag="{{ post.url | prepend: site.baseurl | remove_first:'/'}}" data-action="select" >{{ post.title }}</a>
+                    {{ post.content }}
+                </div>
+            </li>   {% endfor %} 
+        </ul>
+    </section>
 </main>
 
-<aside class="rightDiv">
-</aside>
+<aside class="rightDiv"></aside>
 <div class="sidebars">
     <div class="sidebar left">
-        <ul>
-            {% for post in site.posts %}
+        <ul> {% for post in site.posts %}
             <li>
                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
-
+            </li> {% endfor %} 
         </ul>
     </div>
     <div class="sidebar right">
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ page.FBUrl }}/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div></div> 
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ page.FBUrl }}/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+    </div>
 </div>
 <!-- end index.html-->

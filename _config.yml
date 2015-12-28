@@ -13,7 +13,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ilincescumihai.github.io/" # the base hostname & protocol for your site
 twitter_username: IlincescuMihai
 github_username:  IlincescuMihai
-permalink: "/articles/:title"
+permalink: "articles/:title.html"
 
 # Build settings
 markdown: kramdown

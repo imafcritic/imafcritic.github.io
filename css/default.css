@@ -87,5 +87,17 @@ aside {
     padding: 30px; 
     text-align: center;
 }
-
+.article{
+    background:green;
+}
 /* ------------------------------------- /Main components ---------------------------------------------*/
+
+/* IDS */
+#all_articles{
+    background:red;
+    padding:10px;
+}
+#main_article{
+    background: aqua; 
+    padding:10px;
+}

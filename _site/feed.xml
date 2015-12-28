@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>I&#39;m a fucking critic</title>
-    <description>Awesome
-</description>
+    <description></description>
     <link>http://ilincescumihai.github.io//</link>
     <atom:link href="http://ilincescumihai.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Dec 2015 00:22:11 +0200</pubDate>
-    <lastBuildDate>Sun, 27 Dec 2015 00:22:11 +0200</lastBuildDate>
+    <pubDate>Mon, 28 Dec 2015 02:54:15 +0200</pubDate>
+    <lastBuildDate>Mon, 28 Dec 2015 02:54:15 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -16,8 +15,8 @@
 
 </description>
         <pubDate>Mon, 21 Dec 2015 14:07:39 +0200</pubDate>
-        <link>http://ilincescumihai.github.io//articles/Benjamin-Steak-House</link>
-        <guid isPermaLink="true">http://ilincescumihai.github.io//articles/Benjamin-Steak-House</guid>
+        <link>http://ilincescumihai.github.io//articles/Benjamin-Steak-House.html</link>
+        <guid isPermaLink="true">http://ilincescumihai.github.io//articles/Benjamin-Steak-House.html</guid>
         
         
         <category>jekyll</category>
@@ -28,13 +27,13 @@
     
       <item>
         <title>This is not the start</title>
-        <description>&lt;p&gt;This is not the start this is the critic. This is a site about our complaints.
+        <description>&lt;p&gt;This is not the start this is the critic. This is a site about our complaints.&lt;br /&gt;
 Welcome and hope you have the same !&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 16 Dec 2015 14:07:39 +0200</pubDate>
-        <link>http://ilincescumihai.github.io//articles/this-is-not-the-start</link>
-        <guid isPermaLink="true">http://ilincescumihai.github.io//articles/this-is-not-the-start</guid>
+        <link>http://ilincescumihai.github.io//articles/this-is-not-the-start.html</link>
+        <guid isPermaLink="true">http://ilincescumihai.github.io//articles/this-is-not-the-start.html</guid>
         
         
         <category>jekyll</category>
