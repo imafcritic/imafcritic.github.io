@@ -40,7 +40,7 @@
         }
         else {
 
-            var $currentArticle = $thisElem.parent();
+            var $currentArticle = $thisElem ;
             var ref = $thisElem.attr("tag");
             
             var current_id = $currentArticle.attr("id");
@@ -54,7 +54,7 @@
             //$("#" + main_id).load(getRef(main_id));
             // put the selected on into main 
             $("#main_article").empty();
-            $("#main_article").hide().html($thisElem.parent().contents()).show(500);
+            $("#main_article").hide().html($thisElem.contents()).show(500);
             //$("#main_article").load(ref);
             main_id = current_id; 
             // empty out the selected one 

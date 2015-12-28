@@ -132,3 +132,11 @@ div.horiz_line   {
 }
 
 
+div.btn{
+    cursor:pointer;
+}
+div.btn:hover{
+    cursor:pointer;
+    background-color:grey;
+    
+}
