@@ -1,14 +1,14 @@
- /* -------------------------------- Reset command default values -------------------------------------*/
+/* -------------------------------- Reset command default values -------------------------------------*/
 *, *:before, *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html, body{
-  height:100%;
- padding:1em;
+html, body {
+    height: 100%;
+    padding: 1em;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
 }
@@ -21,31 +21,31 @@ a {
     border-bottom: 2px solid transparent;
 }
 
-a:hover {
-    color: #da1664;
-	/* #da1664; */
-	/* #42a8bd */
-	/* #80bb44 */
-	/* text-decoration:underline; */
-	transition: color 0.3s ease;
-} 
+    a:hover {
+        color: #da1664;
+        /* #da1664; */
+        /* #42a8bd */
+        /* #80bb44 */
+        /* text-decoration:underline; */
+        transition: color 0.3s ease;
+    }
 /* -------------------------------- /Reset command default values -------------------------------------*/
 
 
 /* ------------------------------------- Main components ---------------------------------------------*/
 main {
-    float:left;
-    width:45%;
+    float: left;
+    width: 45%;
 }
 
 section {
     /*width:85%;*/
-    margin:auto;
+    margin: auto;
     /*text-align:center;*/
 }
 
 aside {
-    height:100%;
+    height: 100%;
 }
 
 .leftDiv {
@@ -54,89 +54,147 @@ aside {
 }
 
 .rightDiv {
-    width:35%;
-    float:right;
+    width: 35%;
+    float: right;
     /*text-align:right;*/
 }
 
 /* ------------------------------------- /sidebar ---------------------------------------------*/
- 
+
 
 .sidebar.left {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 20%; 
-    border-left:dotted 1px #cccccc; 
+    width: 20%;
+    /*border-left:dotted 1px #cccccc;*/
 }
 
 .sidebar.right {
     top: 0;
     right: 10px;
     bottom: 0;
-    width: 35%; 
-    border-right:dotted 1px #cccccc; 
+    width: 35%;
+    /*border-right:dotted 1px #cccccc;*/
 }
- 
+
 .arrow {
-    height:100%;
-    width:10px;
-    border:dotted 1px #cccccc; 
+    height: 100%;
+    width: 10px;
+    /*border:dotted 1px #cccccc;*/
     margin: -2em;
-    cursor: pointer; 
+    cursor: pointer;
     /*background-color:rebeccapurple;*/
 }
 
-.arrow.left{
-    float:right;
-}
+    .arrow.left {
+        float: right;
+    }
 
-.arrow.right{
-    float:left;
-}
+    .arrow.right {
+        float: left;
+    }
 
 .sidebars > .sidebar {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);*/
     position: fixed;
     color: white;
-    padding: 30px; 
+    padding: 30px;
     text-align: center;
 }
-.article{
+
+.article {
     /*background:green;*/
 }
+
+    .article h2 {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 /* ------------------------------------- /Main components ---------------------------------------------*/
 
 /* IDS */
-#all_articles{
+#all_articles {
     /*background:red;*/
-    padding:10px;
-}
-#main_article{
-     /*background: aqua;*/ 
-    /*padding:10px;*/
+    padding-left: 10px;
 }
 
-div.article p{
+#main_article {
+    /*background: aqua;*/
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+    #main_article:hover {
+        /*background: aqua;*/
+        /*padding:10px;*/
+        box-shadow: 0px 0px 2px rgba(46, 204, 113,1.0); /*rgba(0, 0, 0, 0.64); force*/
+    }
+
+    #main_article:active {
+        /*background: aqua;*/
+        box-shadow: 0px 0px 5px rgba(192, 57, 43,1.0); /*rgba(0, 0, 0, 0.64); force*/
+    }
+
+.article .content p {
     overflow: hidden;
-text-overflow: ellipsis;
--o-text-overflow: ellipsis;
-white-space: nowrap;
-width: 100%;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 
-/*...........lines..........................*/
-div.horiz_line   { 
-    content:   url('../img/line_divider_horizontal.png');
+.article .content {
+    padding: 0 10px;
+}
+/*...........................................................lines..........................................................................*/
+div.ver_line {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
+    div.ver_line div {
+        content: url('../img/line_divider_vertical.png');
+    }
 
-div.btn{
-    cursor:pointer;
+        div.ver_line div:hover {
+            content: url('../img/line_divider_vertical_long_hover_force.png'); /*force*/
+        }
+
+        div.ver_line div:active {
+            content: url('../img/line_divider_vertical_long_active_force.png'); /*force*/
+        }
+
+
+div.horiz_line {
+    width: 100%;
+    text-align: center;
 }
-div.btn:hover{
-    cursor:pointer;
-    background-color:grey;
-    
+
+    div.horiz_line div {
+        content: url('../img/line_divider_horizontal.png');
+        display: inline-block;
+    }
+
+
+/*...........................................................btns..........................................................................*/
+
+
+
+.btn {
+    cursor: pointer;
+}
+
+div.btnSelect:hover {
+    background-color: #FEFEFE;
+    box-shadow: 2px 2px 5px rgba(46, 204, 113,0.64); /*rgba(0, 0, 0, 0.64); force*/
+}
+
+div.btnSelect:active {
+    background-color: #FaFaFa;
+    box-shadow: 2px 2px 5px rgba(192, 57, 43,0.64); /*(0, 0, 0, 0.64); force*/
 }

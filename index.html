@@ -8,20 +8,20 @@ layout: page
     <noscript>
         &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
     </noscript>
-    <section id="main_article">
+    <section id="main_article" class="right btn" data-action="toggle" data-side="right">
         <!-- this content will be emptied -->
     </section>
-    <div class="horiz_line"></div>
+    <div class="horiz_line"><div></div></div>
 
     <section id="all_articles">
         <ul>
             {% for post in site.posts %}
             <li>
                 <div tag="{{ post.url | prepend: site.baseurl | remove_first:'/'}}"
-                     data-action="select" class="btn article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
+                     data-action="select" class="btn btnSelect article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
                     <h2>{{ post.title }}</h2>
-                    {{ post.content }}
-                    <div class="horiz_line"></div>
+                    <div class="content"> {{ post.content }}</div>
+                    <div class="horiz_line"><div></div></div>
                 </div>
             </li>   {% endfor %}
         </ul>
@@ -37,10 +37,14 @@ layout: page
                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </li> {% endfor %}
         </ul>
-        <div class="arrow left btn btn-primary" data-action="toggle" data-side="left"></div>
+        <div class="arrow left btn btn-primary" data-action="toggle" data-side="left">
+            <div class="ver_line"><div></div></div>
+        </div>
     </div>
     <div class="sidebar right" id="comments">
-        <div class="arrow right btn btn-primary" data-action="toggle" data-side="right"></div>
+        <div class="arrow right btn btn-primary" data-action="toggle" data-side="right">
+            <div class="ver_line"><div></div></div>
+        </div>
         <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url }}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
 </div>
