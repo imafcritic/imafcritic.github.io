@@ -6,22 +6,23 @@ layout: page
 
 <main>
     <a href="#" class="btn btn-primary" data-action="toggle" data-side="left"><span>Toggle Left</span></a>
+
+    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Comments</span></a>
     <noscript>
         &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
     </noscript>
-    <section id="main_article">
-        {{ site.posts.first.title }}
-        {{ site.posts.first.content }}
+    <section id="main_article"> <!-- this content will be emptied -->
     </section>
+    <div class="horiz_line"></div>
 
-    <a href="#" class="btn btn-primary" data-action="toggle" data-side="right"><span>Comments</span></a>
     <section id="all_articles">
         <ul>  {% for post in site.posts %}  
             <li> 
                 <div class="article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"> 
                     <a href="#" class="btn" tag="{{ post.url | prepend: site.baseurl | remove_first:'/'}}" data-action="select" >{{ post.title }}</a>
-                    {{ post.content }}
-                </div>
+                    {{ post.content }} 
+                    <div class="horiz_line"></div>
+                </div> 
             </li>   {% endfor %} 
         </ul>
     </section>
@@ -37,7 +38,7 @@ layout: page
         </ul>
     </div>
     <div class="sidebar right" id="comments">
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/asd" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/asd" tag ="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
 </div>
 <!-- end index.html-->

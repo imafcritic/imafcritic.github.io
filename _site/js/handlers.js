@@ -59,7 +59,7 @@
             main_id = current_id; 
             // empty out the selected one 
             $currentArticle.empty();
-            changeCommentsUrl("http://imafcritic.github.io/articles//"); 
+            changeCommentsUrl(main_id); 
         }
         return false;
     });

@@ -39,7 +39,7 @@ main {
 }
 
 section {
-    width:85%;
+    /*width:85%;*/
     margin:auto;
     /*text-align:center;*/
 }
@@ -88,16 +88,31 @@ aside {
     text-align: center;
 }
 .article{
-    background:green;
+    /*background:green;*/
 }
 /* ------------------------------------- /Main components ---------------------------------------------*/
 
 /* IDS */
 #all_articles{
-    background:red;
+    /*background:red;*/
     padding:10px;
 }
 #main_article{
-    background: aqua; 
-    padding:10px;
+     /*background: aqua;*/ 
+    /*padding:10px;*/
 }
+
+div.article p{
+    overflow: hidden;
+text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+white-space: nowrap;
+width: 100%;
+}
+
+/*...........lines..........................*/
+div.horiz_line   { 
+    content:   url('../img/line_divider_horizontal.png');
+}
+
+
