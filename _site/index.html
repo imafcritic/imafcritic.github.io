@@ -167,7 +167,10 @@ $(function(){
 
     <script>
         $(document).ready(function () {
-
+            App.initialisation();
+            $(".btn[data-action]").on("click", function () {
+                App.ChangeMainArticle($(this));
+            });
         });
     </script>
   </body>
