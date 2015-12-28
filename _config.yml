@@ -7,10 +7,10 @@
 
 # Site settings
 title: I'm a fucking critic
-email: mihai@ilincescu.ro
+email: mihai1988@gmail.com
 description: > # Static websites are awesome yay!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ilincescumihai.github.io/" # the base hostname & protocol for your site
+url: "http://imafcritic.github.io" # the base hostname & protocol for your site
 twitter_username: IlincescuMihai
 github_username:  IlincescuMihai
 permalink: "articles/:title.html"
