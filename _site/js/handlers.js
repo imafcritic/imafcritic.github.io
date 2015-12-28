@@ -50,11 +50,11 @@
             //put the content of main back to its place
             //get the element
             $("#" + main_id).empty();
-            $("#" + main_id).hide().html($("#main_article").html()).show(500);
+            $("#" + main_id).hide().html($("#main_article").contents()).show(500);
             //$("#" + main_id).load(getRef(main_id));
             // put the selected on into main 
             $("#main_article").empty();
-            $("#main_article").hide().html($thisElem.parent().html()).show(500);
+            $("#main_article").hide().html($thisElem.parent().contents()).show(500);
             //$("#main_article").load(ref);
             main_id = current_id; 
             // empty out the selected one 
