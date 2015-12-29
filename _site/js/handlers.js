@@ -1,5 +1,6 @@
 ﻿App = {};
 App.main_id = null;
+App.startTime = null;
 
 App.initialisation = function () {
 
@@ -26,14 +27,26 @@ App.initialisation = function () {
     $first_article.empty();
 }
 
+
 App.ChangeMainArticle = function ($thisElem) {
+   
     var action = $thisElem.attr("data-action");
     if (action == "toggle") {
+        if (App.startTime != null) {
+            var time = new Date().getTime() - App.startTime;
+            if (time < 80) {
+                return false;
+            }
+            App.startTime = null;
+        }
+
         var side = $thisElem.attr("data-side");
         $(".sidebar." + side).trigger("sidebar:" + action);
     }
     else {
-   
+        
+        App.startTime = new Date().getTime();
+
         var current_id = "#"+$thisElem.attr("tag");
 
         var $currentArticle = $(current_id);
