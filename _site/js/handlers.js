@@ -44,7 +44,7 @@ App.ChangeMainArticle = function ($thisElem) {
         main_id = current_id;
         // empty out the selected one 
         $currentArticle.empty();
-        App.changeCommentsUrl("http://imafcritic.github.io/articles//");
+        App.changeCommentsUrl(main_id);
     }
     return false;
 }
