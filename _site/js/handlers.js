@@ -15,7 +15,7 @@ App.initialisation = function () {
     $("#main_article").empty();
     var $first_article = $('#all_articles ul li div').first();
 
-    main_id = $first_article.attr("id");
+    main_id = "#"+$first_article.attr("id");
     // $("#main_article").load(getRef(main_id));
     $("#main_article").hide().html($first_article.html()).show(500);
     $first_article.empty();
@@ -28,18 +28,18 @@ App.ChangeMainArticle = function ($thisElem) {
         $(".sidebar." + side).trigger("sidebar:" + action);
     }
     else {
-        var $currentArticle = $thisElem;
-        var ref = $thisElem.attr("tag");
-        var current_id = $currentArticle.attr("id");
+   
+        var current_id = "#"+$thisElem.attr("tag");
 
+        var $currentArticle = $(current_id);
         //put the content of main back to its place
         //get the element
-        $("#" + main_id).empty();
-        $("#" + main_id).hide().html($("#main_article").contents()).show(500);
+        $(main_id).empty();
+        $(main_id).hide().html($("#main_article").contents()).show(500);
         //$("#" + main_id).load(getRef(main_id));
         // put the selected on into main 
         $("#main_article").empty();
-        $("#main_article").hide().html($thisElem.contents()).show(500);
+        $("#main_article").hide().html($currentArticle.contents()).show(500);
         //$("#main_article").load(ref);
         main_id = current_id;
         // empty out the selected one 

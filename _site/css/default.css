@@ -99,7 +99,7 @@ aside {
 .sidebars > .sidebar {
     /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);*/
     position: fixed;
-    color: white;
+    
     padding: 30px;
     text-align: center;
 }
@@ -131,12 +131,12 @@ aside {
     #main_article:hover {
         /*background: aqua;*/
         /*padding:10px;*/
-        box-shadow: 0px 0px 2px  rgba(0, 0, 0, 0.64);
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.64);
     }
 
     #main_article:active {
         /*background: aqua;*/
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.64); 
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.64);
     }
 
 .article .content p {
@@ -150,11 +150,25 @@ aside {
 .article .content {
     padding: 0 10px;
 }
-/*...........................................................lines..........................................................................*/
-div.ver_line {
+
+/*center vertical and horizantal*/
+.v_center {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.h_center {
+    width: 100%;
+    text-align: center;
+}
+
+    .h_center div {
+        display: inline-block;
+    }
+
+/*...........................................................lines..........................................................................*/
+div.ver_line {
 }
 
     div.ver_line div {
@@ -162,22 +176,18 @@ div.ver_line {
     }
 
         div.ver_line div:hover {
-            content: url('../img/line_divider_vertical_long_hover.png');  
+            content: url('../img/line_divider_vertical_long_hover.png');
         }
 
         div.ver_line div:active {
-            content: url('../img/line_divider_vertical_long_active.png');  
+            content: url('../img/line_divider_vertical_long_active.png');
         }
 
-
 div.horiz_line {
-    width: 100%;
-    text-align: center;
 }
 
     div.horiz_line div {
         content: url('../img/line_divider_horizontal.png');
-        display: inline-block;
     }
 
 
@@ -191,10 +201,10 @@ div.horiz_line {
 
 div.btnSelect:hover {
     background-color: #FEFEFE;
-    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.64);  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.64);
 }
 
 div.btnSelect:active {
     background-color: #FaFaFa;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.64);  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.64);
 }

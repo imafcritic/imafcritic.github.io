@@ -11,17 +11,17 @@ layout: page
     <section id="main_article" class="right btn" data-action="toggle" data-side="right">
         <!-- this content will be emptied -->
     </section>
-    <div class="horiz_line"><div></div></div>
+    <div class="horiz_line h_center"><div></div></div>
 
     <section id="all_articles">
         <ul>
             {% for post in site.posts %}
             <li>
-                <div tag="{{ post.url | prepend: site.baseurl | remove_first:'/'}}"
+                <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
                      data-action="select" class="btn btnSelect article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
                     <h2>{{ post.title }}</h2>
                     <div class="content"> {{ post.content }}</div>
-                    <div class="horiz_line"><div></div></div>
+                    <div class="horiz_line h_center"><div></div></div>
                 </div>
             </li>   {% endfor %}
         </ul>
@@ -30,20 +30,26 @@ layout: page
 
 <aside class="rightDiv"></aside>
 <div class="sidebars">
-    <div class="sidebar left">
-        <ul style="float:left;">
-            {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li> {% endfor %}
-        </ul>
+    <div class="sidebar left "> 
+        <div class="v_center" style="float:left;">
+            <ul  style="float:left;">
+                {% for post in site.posts %}
+                <li>
+                 <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
+                     data-action="select" class="btn btnSelect article" id="btn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
+                  <span>{{ post.title }}</span>
+                     <!--  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
+                     </div>
+                </li> {% endfor %}
+            </ul>
+        </div>
         <div class="arrow left btn btn-primary" data-action="toggle" data-side="left">
-            <div class="ver_line"><div></div></div>
+            <div class="ver_line v_center"><div></div></div>
         </div>
     </div>
     <div class="sidebar right" id="comments">
         <div class="arrow right btn btn-primary" data-action="toggle" data-side="right">
-            <div class="ver_line"><div></div></div>
+            <div class="ver_line v_center"><div></div></div>
         </div>
         <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url }}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
