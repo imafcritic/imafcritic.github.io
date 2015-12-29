@@ -36,6 +36,7 @@ a {
 main {
     float: left;
     width: 45%;
+    display:none;
 }
 
 section {
@@ -99,6 +100,7 @@ aside {
 .sidebars > .sidebar {
     /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);*/
     position: fixed;
+    display:none;
     color: white;
     padding: 30px;
     text-align: center;
