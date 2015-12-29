@@ -1,5 +1,7 @@
 ---
 layout: post
+category: programming
+tags: [sibiu, mancare]
 title:  "Benjamin Steak House - Sibiu, Romania"
 date:   2015-12-21 14:07:39 +0200
 categories: jekyll update
