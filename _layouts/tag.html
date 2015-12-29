@@ -64,11 +64,12 @@ layout: page
                                 {% endif %}
                             {% endfor %}
                             {% if tag %}
-                                <li>
-                                    <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
+                               <li>
+                                    <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
+                                    <!--<div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
                                          data-action="select" class="btn btnSelect article" id="btn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
                                         <span>{{ tag.name }}</span>
-                                    </div>
+                                    </div>-->
                                 </li>
                             {% endif %}
                         {% endfor %}
