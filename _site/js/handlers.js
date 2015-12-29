@@ -2,6 +2,11 @@
 App.main_id = null;
 
 App.initialisation = function () {
+
+    //Show divs
+    $("main").show();
+    $(".sidebar").show();
+
     // All sides
     var sides = ["left", "right"];
 

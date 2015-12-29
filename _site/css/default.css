@@ -36,6 +36,7 @@ a {
 main {
     float: left;
     width: 45%;
+    display:none;
 }
 
 section {
@@ -46,6 +47,7 @@ section {
 
 aside {
     height: 100%;
+    cursor:pointer;
 }
 
 .leftDiv {
@@ -61,6 +63,9 @@ aside {
 
 /* ------------------------------------- /sidebar ---------------------------------------------*/
 
+.sidebar {
+    cursor:pointer;
+}
 
 .sidebar.left {
     position: fixed;
@@ -99,6 +104,7 @@ aside {
 .sidebars > .sidebar {
     /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);*/
     position: fixed;
+    display:none; 
     
     padding: 30px;
     text-align: center;
