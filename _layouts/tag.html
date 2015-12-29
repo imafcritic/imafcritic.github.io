@@ -15,18 +15,38 @@ layout: page
     <div class="horiz_line h_center"><div></div></div>
 
     <section id="all_articles">
-        <ul>
-            {% for post in site.posts %}
-            <li>
-                <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
-                     data-action="select" class="btn btnSelect article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
-                    <h2>{{ post.title }}</h2>
-                    <div class="content"> {{ post.content }}</div>
-                    <div class="horiz_line h_center"><div></div></div>
-                </div>
-            </li>   
-            {% endfor %}
-        </ul>
+         {% if site.tags[page.tag] %}
+                {% for post in site.tags[page.tag] %}
+                    {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+                    {% if forloop.first %}
+                        <h3>{{ post_year }}</h3>
+						<ul>
+                    {% endif %}
+			
+                    {% if forloop.first == false %}
+                        {% assign previous_index = forloop.index0 | minus: 1 %}
+                        {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
+                        {% if post_year != previous_post_year %}
+                            </ul>
+							<h3>{{ post_year }}</h3>
+							<ul>
+                        {% endif %}
+                    {% endif %}
+					<li>
+						<div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
+							 data-action="select" class="btn btnSelect article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
+							<h2>{{ post.title }}</h2>
+							<div class="content"> {{ post.content }}</div>
+							<div class="horiz_line h_center"><div></div></div>
+						</div>
+					</li>
+                    {% if forloop.last %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>There are no posts for this tag.</p>
+            {% endif %}
     </section>
 </main>
 
@@ -45,11 +65,10 @@ layout: page
                             {% endfor %}
                             {% if tag %}
                                 <li>
-                                    <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
-                                    <!--<div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
+                                    <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
                                          data-action="select" class="btn btnSelect article" id="btn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
                                         <span>{{ tag.name }}</span>
-                                    </div>-->
+                                    </div>
                                 </li>
                             {% endif %}
                         {% endfor %}

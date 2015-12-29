@@ -1,7 +1,7 @@
 ---
 layout: post
 category: programming
-tags: [diverse]
+tags: [sibiu,diverse]
 title:  "This is not the start"
 date:   2015-12-16 14:07:39 +0200
 categories: jekyll update
