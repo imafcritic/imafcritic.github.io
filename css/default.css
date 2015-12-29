@@ -47,6 +47,7 @@ section {
 
 aside {
     height: 100%;
+    cursor:pointer;
 }
 
 .leftDiv {
@@ -62,6 +63,9 @@ aside {
 
 /* ------------------------------------- /sidebar ---------------------------------------------*/
 
+.sidebar {
+    cursor:pointer;
+}
 
 .sidebar.left {
     position: fixed;
