@@ -1,7 +1,6 @@
 ---
 layout: page
 ---
-
 <!-- start index.html-->
 <aside class="leftDiv btn btn-primary" data-action="toggle" data-side="left"></aside>
 
@@ -24,8 +23,7 @@ layout: page
                     <div class="content"> {{ post.content }}</div>
                     <div class="horiz_line h_center"><div></div></div>
                 </div>
-            </li>   
-            {% endfor %}
+            </li>   {% endfor %}
         </ul>
     </section>
 </main>
@@ -36,30 +34,16 @@ layout: page
         <div class="v_center" style="float:left;">
             <ul  style="float:left;">
                 {% for post in site.posts %}
-                    {% if post.tags.size > 0 %}
-                        {% for post_tag in post.tags %}
-                            {% for data_tag in site.data.tags %}
-                                {% if data_tag.slug == post_tag %}
-                                    {% assign tag = data_tag %}
-                                {% endif %}
-                            {% endfor %}
-                            {% if tag %}
-                                <li>
-                                    <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
-                                    <!--<div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
-                                         data-action="select" class="btn btnSelect article" id="btn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
-                                        <span>{{ tag.name }}</span>
-                                    </div>-->
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                        {% assign tags_content = '' %}
-                    {% endif %}
-                {% endfor %}
-            </ul>    
+                <li>
+                 <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
+                     data-action="select" class="btn btnSelect article" id="btn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
+                  <span>{{ post.title }}</span>
+                     <!--  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
+                     </div>
+                </li> {% endfor %}
+            </ul>
         </div>
-        <div class="arrow left">
+        <div class="arrow left"> 
             <div class="ver_line v_center"><div></div></div>
         </div>
     </div>
@@ -67,7 +51,7 @@ layout: page
         <div class="arrow right">
             <div class="ver_line v_center"><div></div></div>
         </div>
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url }}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url   |   remove_first:'/articles/' | replace:'.html',''}}"  tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
 </div>
 <!-- end index.html--> 
