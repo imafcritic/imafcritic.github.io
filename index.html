@@ -67,7 +67,7 @@ layout: page
         <div class="arrow right">
             <div class="ver_line v_center"><div></div></div>
         </div>
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url }}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url   |   remove_first:'/articles/' | replace:'.html',''}}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
 </div>
 <!-- end index.html--> 
