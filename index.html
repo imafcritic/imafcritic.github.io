@@ -2,16 +2,13 @@
 layout: page
 ---
 
-<!-- start index.html-->
-<aside class="leftDiv btn btn-primary" data-action="toggle" data-side="left"></aside>
+<aside class="col-md-2 myBtn" data-action="toggle" data-side="left"></aside>
 
-<main>
-    <noscript>
-        &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
-    </noscript>
-    <section id="main_article" class="right btn" data-action="toggle" data-side="right">
-        <!-- this content will be emptied -->
-    </section>
+
+<main class="col-md-6">
+    
+    <section id="main_article" class="right myBtn" data-action="toggle" data-side="right"></section>
+
     <div class="horiz_line h_center"><div></div></div>
 
     <section id="all_articles">
@@ -19,7 +16,7 @@ layout: page
             {% for post in site.posts %}
             <li>
                 <div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
-                     data-action="select" class="btn btnSelect article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
+                     data-action="select" class="myBtn myBtnSelect article" id="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
                     <h2>{{ post.title }}</h2>
                     <div class="content"> {{ post.content }}</div>
                     <div class="horiz_line h_center"><div></div></div>
@@ -28,14 +25,15 @@ layout: page
             {% endfor %}
         </ul>
     </section>
+
 </main>
 
-<aside class="rightDiv btn btn-primary" data-action="toggle" data-side="right"></aside>
+<aside class="col-md-4 myBtn" data-action="toggle" data-side="right"></aside>
 <div class="sidebars">
-    <div class="sidebar left btn btn-primary" data-action="toggle" data-side="left"> 
+    <div class="sidebar left col-md-2 myBtn" data-action="toggle" data-side="left"> 
         <div class="v_center" style="float:left;">
             <ul  style="float:left;">
-                {% assign used_tags = "" | split:"|"  %}
+                {% assign used_tags ="" | split:"|"  %}
                 
                 {% for post in site.posts %}
                     {% if post.tags.size > 0 %}
@@ -58,10 +56,6 @@ layout: page
                                     {% assign used_tags = used_tags | push: tag.name %}
                                     <li>
                                         <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
-                                        <!--<div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
-                                             data-action="select" class="btn btnSelect article" id="btn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
-                                            <span>{{ tag.name }}</span>
-                                        </div>-->
                                     </li>
                                 {% endif %}
                             {% endif %}
@@ -79,7 +73,7 @@ layout: page
             <div class="ver_line v_center"><div></div></div>
         </div>
     </div>
-    <div class="sidebar right btn btn-primary" data-action="toggle" data-side="right" id="comments">
+    <div class="sidebar right col-md-4 myBtn" data-action="toggle" data-side="right" id="comments">
         <div class="arrow right">
             <div class="ver_line v_center"><div></div></div>
         </div>

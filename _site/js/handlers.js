@@ -9,7 +9,7 @@ App.initialisation = function () {
     $(".sidebar").show();
 
     // All sides
-    var sides = ["left", "right"];
+    var sides = ["left","right"];
 
     // Initialize sidebars
     for (var i = 0; i < sides.length; ++i) {
@@ -21,7 +21,7 @@ App.initialisation = function () {
     $("#main_article").empty();
     var $first_article = $('#all_articles ul li div').first();
 
-    main_id = "#"+$first_article.attr("id");
+    main_id ="#"+$first_article.attr("id");
     // $("#main_article").load(getRef(main_id));
     $("#main_article").hide().html($first_article.html()).show(500);
     $first_article.empty();
@@ -31,7 +31,7 @@ App.initialisation = function () {
 App.ChangeMainArticle = function ($thisElem) {
    
     var action = $thisElem.attr("data-action");
-    if (action == "toggle") {
+    if (action =="toggle") {
         if (App.startTime != null) {
             var time = new Date().getTime() - App.startTime;
             if (time < 80) {
@@ -47,7 +47,7 @@ App.ChangeMainArticle = function ($thisElem) {
         
         App.startTime = new Date().getTime();
 
-        var current_id = "#"+$thisElem.attr("tag");
+        var current_id ="#"+$thisElem.attr("tag");
 
         var $currentArticle = $(current_id);
         //put the content of main back to its place
@@ -68,7 +68,7 @@ App.ChangeMainArticle = function ($thisElem) {
 }
 
 App.getRef = function (id) {
-    return "articles/" + id + ".html";
+    return"articles/" + id +".html";
 }
 
 App.getID = function (ref) {

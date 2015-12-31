@@ -288,7 +288,7 @@ article+a {
 }
 
 article+a:before {
-    content: "<<";
+    content:"<<";
     margin-right: 5px;
     color: #000;
 }

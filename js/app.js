@@ -2,7 +2,7 @@ Vidpub = {};
 
 Vidpub.start = function(){
 
-  Vidpub.rootUrl = "https://staticwebsite.firebaseio.com";
+  Vidpub.rootUrl ="https://staticwebsite.firebaseio.com";
   Vidpub.dbRef = new Firebase(Vidpub.rootUrl);
 
   Vidpub.dbRef.onAuth(function(authData){
@@ -39,17 +39,17 @@ Vidpub.loginWithEmailPassword = function(credentials, next){
   Vidpub.dbRef.authWithPassword(credentials, function(error, authData) {
     if (error) {
       switch (error.code) {
-        case "INVALID_EMAIL":
+        case"INVALID_EMAIL":
           next("The specified user account email is invalid.", null);
           break;
-        case "INVALID_PASSWORD":
+        case"INVALID_PASSWORD":
           next("The specified user account password is incorrect.", null);
           break;
-        case "INVALID_USER":
+        case"INVALID_USER":
           next("The specified user account does not exist.", null);
           break;
         default:
-          next("Error logging user in: " +  error, null);
+          next("Error logging user in:" +  error, null);
       }
     } else {
       next(null, authData);
@@ -60,7 +60,7 @@ Vidpub.loginWithEmailPassword = function(credentials, next){
 Vidpub.loginGithub = function(next){
   Vidpub.dbRef.authWithOAuthPopup("github", function(error, authData) {
     if (error) {
-      if (error.code === "TRANSPORT_UNAVAILABLE") {
+      if (error.code ==="TRANSPORT_UNAVAILABLE") {
         // fall-back to browser redirects, and pick up the session
         // automatically when we come back to the origin page
         ref.authWithOAuthRedirect("github", function(error) {
@@ -82,14 +82,14 @@ Vidpub.loginGithub = function(next){
 var loadCurrentUser = function(next){
   var authData = Vidpub.dbRef.getAuth();
   if(authData){
-    if(authData.provider == "github"){
+    if(authData.provider =="github"){
       next({
         email: authData.github.email,
         name: authData.github.displayName,
         gitubber: true
       });
     }else{
-      var url = Vidpub.rootUrl + "/users/" + authData.uid;
+      var url = Vidpub.rootUrl +"/users/" + authData.uid;
       var ref = new Firebase(url);
       ref.once("value", function(user){
         next(user.val());
@@ -108,22 +108,22 @@ var personalize = function(user){
       if(user){
         return user.name
       }else{
-        return "";
+        return"";
       }
     }),
     login_or_out : function(){
       if(user){
         Vidpub.dbRef.unauth();
-        location.href = "/"
+        location.href ="/"
       }else{
-        location.href = "/account/login"
+        location.href ="/account/login"
       }
     },
     login_or_out_button : ko.computed(function(){
       if(user){
-        return "Logout";
+        return"Logout";
       }else{
-        return "Login";
+        return"Login";
       }
     })
   }

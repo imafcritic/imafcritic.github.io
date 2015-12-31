@@ -18,10 +18,10 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
+    -webkit-font-feature-settings:"kern" 1;
+    -moz-font-feature-settings:"kern" 1;
+    -o-font-feature-settings:"kern" 1;
+    font-feature-settings:"kern" 1;
     font-kerning: normal;
 }
 
@@ -180,7 +180,7 @@ pre {
 %clearfix {
 
     &:after {
-        content: "";
+        content:"";
         display: table;
         clear: both;
     }

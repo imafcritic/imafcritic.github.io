@@ -68,7 +68,7 @@
             speed: 200,
 
             // Side: left|right|top|bottom
-            side: "left",
+            side:"left",
 
             // Is closed
             isClosed: false,
@@ -99,7 +99,7 @@
          * */
         self.on("sidebar:close", function(ev, data) {
             var properties = {};
-            if (settings.side === "left" || settings.side === "right") {
+            if (settings.side ==="left" || settings.side ==="right") {
                 properties[settings.side] = -self.outerWidth()+7;
             } else {
                 properties[settings.side] = -self.outerHeight();
@@ -145,5 +145,5 @@
     };
 
     // Version
-    $.fn.sidebar.version = "3.3.2";
+    $.fn.sidebar.version ="3.3.2";
 })(jQuery);

@@ -1,6 +1,6 @@
 <!-- start signup.html-->
 ---
-title: "Signup"
+title:"Signup"
 layout: page
 ---
 <link rel="stylesheet" href="/css/login.css">
@@ -9,7 +9,7 @@ layout: page
 
   <div class="row omb_row-sm-offset-3 omb_row-sm-offset-3 omb_socialButtons">
     <div class="col-xs-12 col-sm-6">
-      <a href="#" class="btn btn-lg btn-block omb_btn-github" id="github">
+      <a href="#" class="myBtn myBtn-lg myBtn-block omb_myBtn-github" id="github">
         <i class="fa fa-github"></i>
         <span class="hidden-xs">Github</span>
       </a>
@@ -41,7 +41,7 @@ layout: page
 			</div>
       <span class="help-block"></span>
 
-			<button  id="signup" class="btn btn-lg btn-primary btn-block" type="submit">Signup</button>
+			<button  id="signup" class="myBtn myBtn-lg  myBtn-block" type="submit">Signup</button>
       <span class="help-block" id="error" style="color:red;font-weight:bold"></span>
 		</div>
   </div>
@@ -55,7 +55,7 @@ $(function(){
       if(err){
         $("#error").text(err);
       }else{
-        location.href = "/";
+        location.href ="/";
       }
     });
   });
@@ -69,7 +69,7 @@ $(function(){
       if(err){
         $("#error").text(err);
       }else{
-        location.href = "/";
+        location.href ="/";
       }
     });
   });

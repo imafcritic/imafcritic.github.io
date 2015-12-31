@@ -1,6 +1,6 @@
 <!-- start login.html-->
 ---
-title: "Login or Signup"
+title:"Login or Signup"
 layout: page
 ---
   <link rel="stylesheet" href="/css/login.css">
@@ -8,13 +8,13 @@ layout: page
     <h3 class="omb_authTitle">Login or <a href="/account/signup">Sign up</a></h3>
 		<div class="row omb_row-sm-offset-3 omb_socialButtons">
 	    <div class="col-xs-4 col-sm-2">
-        <a href="#" class="btn btn-lg btn-block omb_btn-github" id="github">
+        <a href="#" class="myBtn myBtn-lg myBtn-block omb_myBtn-github" id="github">
 	        <i class="fa fa-github"></i>
 	        <span class="hidden-xs">Github</span>
         </a>
       </div>
     	<div class="col-xs-4 col-sm-2">
-        <a href="#" class="btn btn-lg btn-block omb_btn-google">
+        <a href="#" class="myBtn myBtn-lg myBtn-block omb_myBtn-google">
 	        <i class="fa fa-google-plus"></i>
 	        <span class="hidden-xs">Google+</span>
         </a>
@@ -43,7 +43,7 @@ layout: page
 				</div>
         <span class="help-block"></span>
 
-				<button class="btn btn-lg btn-primary btn-block" id="login" type="submit">Login</button>
+				<button class="myBtn myBtn-lg  myBtn-block" id="login" type="submit">Login</button>
         <span class="help-block" id="error" style="color:red;font-weight:bold"></span>
 			</div>
     </div>
@@ -68,7 +68,7 @@ layout: page
         if(err){
           $("#error").text(err);
         }else{
-          location.href = "/";
+          location.href ="/";
         }
       });
     });
@@ -82,7 +82,7 @@ layout: page
         if(err){
           $("#error").text(err);
         }else{
-          location.href = "/"
+          location.href ="/"
         }
       });
     });
