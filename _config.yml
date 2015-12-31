@@ -9,11 +9,11 @@
 title: I'm a fucking critic
 email: mihai1988@gmail.com
 description: > # Static websites are awesome yay!
-baseurl:"" # the subpath of your site, e.g. /blog
-url:"http://imafcritic.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://imafcritic.github.io" # the base hostname & protocol for your site
 twitter_username: IlincescuMihai
 github_username:  IlincescuMihai
-permalink:"articles/:title.html"
+permalink: "articles/:title.html"
 
 # Build settings
 markdown: kramdown
