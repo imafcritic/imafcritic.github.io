@@ -2,20 +2,16 @@
 layout: page
 ---
 
-<!-- start index.html-->
-<aside class="leftDiv myBtn" data-action="toggle" data-side="left"></aside>
+<aside class="col-md-2 myBtn" data-action="toggle" data-side="left"></aside>
 
-<main>
-    <noscript>
-        &lt;style&gt;article .footnotes{display:block;}&lt;/style&gt;
-    </noscript>
-    <section id="main_article" class="right myBtn" data-action="toggle" data-side="right">
-        <!-- this content will be emptied -->
-    </section>
+<main class="col-md-6">
+    
+    <section id="main_article" class="right myBtn" data-action="toggle" data-side="right"></section>
+
     <div class="horiz_line h_center"><div></div></div>
 
     <section id="all_articles">
-         {% if site.tags[page.tag] %}
+            {% if site.tags[page.tag] %}
                 {% for post in site.tags[page.tag] %}
                     {% if forloop.first %}
 						<ul>
@@ -36,14 +32,15 @@ layout: page
                 <p>There are no posts for this tag.</p>
             {% endif %}
     </section>
+
 </main>
 
-<aside class="rightDiv myBtn" data-action="toggle" data-side="right"></aside>
+<aside class="col-md-4 myBtn" data-action="toggle" data-side="right"></aside>
 <div class="sidebars">
-    <div class="sidebar left myBtn" data-action="toggle" data-side="left"> 
+    <div class="sidebar left col-md-2 myBtn" data-action="toggle" data-side="left"> 
         <div class="v_center" style="float:left;">
             <ul  style="float:left;">
-                                {% assign used_tags ="" | split:"|"  %}
+                {% assign used_tags ="" | split:"|"  %}
                 
                 {% for post in site.posts %}
                     {% if post.tags.size > 0 %}
@@ -66,10 +63,6 @@ layout: page
                                     {% assign used_tags = used_tags | push: tag.name %}
                                     <li>
                                         <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
-                                        <!--<div tag="{{post.url |   remove_first:'/articles/' | replace:'.html',''}}"
-                                             data-action="select" class="myBtn myBtnSelect article" id="myBtn_{{post.url |   remove_first:'/articles/' | replace:'.html',''}}">
-                                            <span>{{ tag.name }}</span>
-                                        </div>-->
                                     </li>
                                 {% endif %}
                             {% endif %}
@@ -87,11 +80,10 @@ layout: page
             <div class="ver_line v_center"><div></div></div>
         </div>
     </div>
-    <div class="sidebar right myBtn" data-action="toggle" data-side="right" id="comments">
+    <div class="sidebar right col-md-4 myBtn" data-action="toggle" data-side="right" id="comments">
         <div class="arrow right">
             <div class="ver_line v_center"><div></div></div>
         </div>
-        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url }}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
+        <div class="fb-comments" data-href="http://imafcritic.github.io/articles/{{ site.posts.first.url   |   remove_first:'/articles/' | replace:'.html',''}}" tag="http://imafcritic.github.io/articles/" data-numposts="10" data-width="400" data-order-by="reverse_time"></div>
     </div>
 </div>
-<!-- end index.html--> 
